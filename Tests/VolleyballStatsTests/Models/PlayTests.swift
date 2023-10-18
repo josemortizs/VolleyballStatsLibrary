@@ -40,4 +40,13 @@ final class PlayTests: XCTestCase {
         XCTAssertEqual(play.type, .pass)
         XCTAssertEqual(play.success, 85)
     }
+    
+    func testPlayTypeSpanish() {
+        XCTAssertEqual(PlayType.serve.spanishType, "Saque")
+        XCTAssertEqual(PlayType.pass.spanishType, "Recepción")
+        XCTAssertEqual(PlayType.set.spanishType, "Colocación")
+        XCTAssertEqual(PlayType.spike.spanishType, "Ataque")
+        XCTAssertEqual(PlayType.block.spanishType, "Bloqueo")
+        XCTAssertEqual(PlayType.dig.spanishType, "Defensa")
+    }
 }

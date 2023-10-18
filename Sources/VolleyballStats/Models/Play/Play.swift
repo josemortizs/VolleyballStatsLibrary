@@ -7,16 +7,6 @@
 
 import Foundation
 
-/// Enumeration representing types of volleyball actions.
-public enum PlayType: String {
-    case serve = "SERVE"
-    case pass = "PASS"
-    case set = "SET"
-    case spike = "SPIKE"
-    case block = "BLOCK"
-    case dig = "DIG"
-}
-
 /// Representation of a play, a point, in volleyball
 public struct Play: Identifiable, Hashable, Comparable, Equatable {
     /// unique identifier
