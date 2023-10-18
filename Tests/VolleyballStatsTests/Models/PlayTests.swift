@@ -13,17 +13,17 @@ final class PlayTests: XCTestCase {
     let play = Play(type: .serve, success: 80, position: CGPoint(x: 0, y: 0))
 
     func testEquality() {
-        let play2 = Play(id: play.id, type: play.type, success: play.success, position: play.position)
+        let play2 = Play(id: play.id, type: play.type, success: play.successPercentage, position: play.position)
         XCTAssertEqual(play, play2)
     }
     
     func testInequality() {
-        let play2 = Play(type: play.type, success: play.success, position: play.position)
+        let play2 = Play(type: play.type, success: play.successPercentage, position: play.position)
         XCTAssertNotEqual(play, play2)
     }
     
     func testInequalityWithOtherPosition() {
-        let play2 = Play(id: play.id, type: play.type, success: play.success, position: CGPoint(x: 1, y: 1))
+        let play2 = Play(id: play.id, type: play.type, success: play.successPercentage, position: CGPoint(x: 1, y: 1))
         XCTAssertNotEqual(play, play2)
     }
     
@@ -36,7 +36,7 @@ final class PlayTests: XCTestCase {
         let play = Play(id: "1", type: .block, success: 70, position: CGPoint(x: 0, y: 0))
         XCTAssertEqual(play.id, "1")
         XCTAssertEqual(play.type, .block)
-        XCTAssertEqual(play.success, 70)
+        XCTAssertEqual(play.successPercentage, 70)
         XCTAssertEqual(play.position, CGPoint(x: 0, y: 0))
     }
 
@@ -44,7 +44,7 @@ final class PlayTests: XCTestCase {
         let play = Play(type: .pass, success: 85, position: CGPoint(x: 0, y: 0))
         XCTAssertNotNil(play.id)
         XCTAssertEqual(play.type, .pass)
-        XCTAssertEqual(play.success, 85)
+        XCTAssertEqual(play.successPercentage, 85)
         XCTAssertEqual(play.position, CGPoint(x: 0, y: 0))
     }
     

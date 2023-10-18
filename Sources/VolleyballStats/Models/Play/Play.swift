@@ -15,7 +15,7 @@ public struct Play: Identifiable, Hashable, Comparable, Equatable {
     /// type of play: pass, spike, block...
     public var type: PlayType
     /// success percentage: between 0 - 100
-    public var success: Int
+    public var successPercentage: Int
     /// position at the time of the play
     public var position: CGPoint
     
@@ -27,7 +27,7 @@ public struct Play: Identifiable, Hashable, Comparable, Equatable {
     ) {
         self.id = id
         self.type = type
-        self.success = success
+        self.successPercentage = success
         self.position = position
     }
     
@@ -38,12 +38,12 @@ public struct Play: Identifiable, Hashable, Comparable, Equatable {
     ) {
         self.id = UUID().uuidString
         self.type = type
-        self.success = success
+        self.successPercentage = success
         self.position = position
     }
         
     public static func < (lhs: Play, rhs: Play) -> Bool {
-        lhs.success < rhs.success
+        lhs.successPercentage < rhs.successPercentage
     }
     
     public static func == (lhs: Play, rhs: Play) -> Bool {
