@@ -53,4 +53,13 @@ final class PlayerTests: XCTestCase {
         let player2 = Player(type: player.type, number: player.number, name: player.name)
         XCTAssertNotEqual(player, player2)
     }
+    
+    func testAllPlayerTypesArePresent() {
+        XCTAssertEqual(PlayerType.allCases.count, 5)
+        XCTAssertTrue(PlayerType.allCases.contains(.outsideHitter))
+        XCTAssertTrue(PlayerType.allCases.contains(.middleHitter))
+        XCTAssertTrue(PlayerType.allCases.contains(.oppositeHitter))
+        XCTAssertTrue(PlayerType.allCases.contains(.setter))
+        XCTAssertTrue(PlayerType.allCases.contains(.libero))
+    }
 }

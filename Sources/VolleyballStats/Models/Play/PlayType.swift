@@ -8,7 +8,7 @@
 import Foundation
 
 /// Enumeration representing types of volleyball actions.
-public enum PlayType: String {
+public enum PlayType: String, CaseIterable {
     case serve = "SERVE"
     case pass = "PASS"
     case set = "SET"

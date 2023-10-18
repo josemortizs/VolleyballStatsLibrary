@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum PlayerType: String {
+public enum PlayerType: String, CaseIterable {
     case outsideHitter = "OUTSIDE HITTER"
     case middleHitter = "MIDDLE HITTER"
     case oppositeHitter = "OPPOSITE HITTER"

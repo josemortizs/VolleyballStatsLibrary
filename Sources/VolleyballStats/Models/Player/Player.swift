@@ -18,7 +18,12 @@ public struct Player: Identifiable, Hashable, Equatable {
     /// player name
     public var name: String
     
-    public init(id: String, type: PlayerType, number: Int, name: String) {
+    public init(
+        id: String,
+        type: PlayerType,
+        number: Int,
+        name: String
+    ) {
         self.id = id
         self.type = type
         self.number = number

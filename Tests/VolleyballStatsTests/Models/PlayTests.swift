@@ -49,4 +49,14 @@ final class PlayTests: XCTestCase {
         XCTAssertEqual(PlayType.block.spanishType, "Bloqueo")
         XCTAssertEqual(PlayType.dig.spanishType, "Defensa")
     }
+    
+    func testAllPlayTypesArePresent() {
+        XCTAssertEqual(PlayType.allCases.count, 6)
+        XCTAssertTrue(PlayType.allCases.contains(.serve))
+        XCTAssertTrue(PlayType.allCases.contains(.pass))
+        XCTAssertTrue(PlayType.allCases.contains(.set))
+        XCTAssertTrue(PlayType.allCases.contains(.spike))
+        XCTAssertTrue(PlayType.allCases.contains(.block))
+        XCTAssertTrue(PlayType.allCases.contains(.dig))
+    }
 }
