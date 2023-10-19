@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol PlayBookProtocol: PlayGenerator {
+protocol PlayBookProtocol {
     func getOptions() -> [PlayOption]
 }

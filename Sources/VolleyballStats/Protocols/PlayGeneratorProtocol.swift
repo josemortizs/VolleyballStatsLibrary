@@ -8,5 +8,5 @@
 import Foundation
 
 protocol PlayGenerator {
-    func generatePlay(option: PlayOption, position: CGPoint) -> Play
+    func generatePlay() -> Play
 }
