@@ -7,7 +7,6 @@
 
 import Foundation
 
-// TODO: Implementar este protocolo en PlayOption
 protocol PlayGenerator {
-    func generatePlay() -> Play
+    func generatePlay(option: PlayOption, position: CGPoint) -> Play
 }
