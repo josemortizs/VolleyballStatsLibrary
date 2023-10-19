@@ -9,7 +9,7 @@ import XCTest
 import VolleyballStats
 
 final class PlayOptionTests: XCTestCase {
-
+    
     func testInitializationWithId() {
         let playOption = PlayOption(
             id: "123",

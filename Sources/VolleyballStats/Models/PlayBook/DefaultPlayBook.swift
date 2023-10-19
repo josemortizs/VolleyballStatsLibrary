@@ -8,11 +8,11 @@
 import Foundation
 
 // TODO: Implementar opciones de colocación
-struct DefaultPlayBook: PlayBookProtocol {
+public struct DefaultPlayBook: PlayBookProtocol {
     
     private var options: [PlayOption]
     
-    init() {
+    public init() {
         self.options = [
             .init(
                 type: .serve,
@@ -142,5 +142,5 @@ struct DefaultPlayBook: PlayBookProtocol {
         ]
     }
     
-    func getOptions() -> [PlayOption] { options }
+    public func getOptions() -> [PlayOption] { options }
 }
