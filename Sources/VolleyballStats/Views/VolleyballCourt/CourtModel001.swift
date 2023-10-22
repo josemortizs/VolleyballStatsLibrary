@@ -8,7 +8,6 @@
 import SwiftUI
 import Foundation
 
-// TODO: Pendiente de terminar de implementar closure con player pulsado, nueva posición del player, etc
 struct CourtModel001<Player: PositionableProtocol>: View {
     
     @State private var playerWantToChangePosition: Bool = false
@@ -38,6 +37,7 @@ struct CourtModel001<Player: PositionableProtocol>: View {
                     HStack(alignment: .center, spacing: 0) {
                         ForEach(1..<10) { column in
                             VStack(alignment: .center, spacing: 0) {
+                                // TODO: Controlar si hay alguien en esa posición
                                 if playerWantToChangePosition {
                                     ZStack(alignment: .center) {
                                         Circle()
@@ -52,6 +52,10 @@ struct CourtModel001<Player: PositionableProtocol>: View {
                                 } else {
                                     let player = getPlayer(row: row, column: column)
                                     getPlayer(row: row, column: column)
+                                        .onTapGesture(count: 2) {
+                                            self.playerWantToChangePosition.toggle()
+                                            self.playerSelected = player
+                                        }
                                         .onLongPressGesture(
                                             minimumDuration: 1,
                                             maximumDistance: 10
