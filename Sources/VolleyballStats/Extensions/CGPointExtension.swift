@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreGraphics
 
 extension CGPoint: Hashable {
     
@@ -18,3 +19,4 @@ extension CGPoint: Hashable {
         hasher.combine(y)
     }
 }
+
