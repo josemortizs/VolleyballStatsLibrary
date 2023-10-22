@@ -7,6 +7,6 @@
 
 import SwiftUI
 
-protocol PositionableProtocol: View {
+public protocol PositionableProtocol: View {
     var position: CGPoint { get set }
 }
