@@ -132,7 +132,12 @@ struct ExampleUse_CourtModel001: View {
 public struct ExamplePositionable: PositionableProtocol, Equatable {
     
     public var position: CGPoint
-    public var size: CGFloat = 60
+    public var size: CGFloat
+    
+    public init(position: CGPoint) {
+        self.position = position
+        self.size = 60
+    }
     
     public var body: some View {
         ZStack {
