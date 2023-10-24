@@ -12,10 +12,10 @@ import Foundation
     --------------------------------------------------------------------
     Proof of concept, just a playground of how we could use some
     of the components contained in the library to build a playing field.
- --------------------------------------------------------------------
+    --------------------------------------------------------------------
  */
 
-struct CourtModel001<Player: PositionableProtocol>: View {
+public struct CourtModel001<Player: PositionableProtocol>: View {
     
     @State private var playerWantToChangePosition: Bool = false
     @State private var playerSelected: Player?
@@ -26,7 +26,7 @@ struct CourtModel001<Player: PositionableProtocol>: View {
     private let players: [Player]
     private var onPlayerChangePosition: (Player, CGPoint) -> Void
     
-    init(size: CGSize,  players: [Player], onPlayerChangePosition: @escaping (Player, CGPoint) -> Void) {
+    public init(size: CGSize,  players: [Player], onPlayerChangePosition: @escaping (Player, CGPoint) -> Void) {
         self.width = size.width / 9
         self.height = size.height / 9
         self.lineWidth = max(size.width, size.height) / 90
@@ -34,7 +34,7 @@ struct CourtModel001<Player: PositionableProtocol>: View {
         self.onPlayerChangePosition = onPlayerChangePosition
     }
     
-    var body: some View {
+    public var body: some View {
         ZStack(alignment: .center) {
             
             Color.customBlue.ignoresSafeArea()
