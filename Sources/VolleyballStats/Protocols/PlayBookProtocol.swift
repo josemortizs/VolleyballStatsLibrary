@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol PlayBookProtocol {
+public protocol PlayBookProtocol {
     func getOptions() -> [PlayOption]
 }

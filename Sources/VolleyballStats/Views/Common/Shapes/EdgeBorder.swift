@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct EdgeBorder: Shape {
+public struct EdgeBorder: Shape {
     var width: CGFloat
     var edges: [Edge]
     
-    func path(in rect: CGRect) -> Path {
+    public func path(in rect: CGRect) -> Path {
         edges.map { edge -> Path in
             switch edge {
             case .top: return Path(.init(x: rect.minX, y: rect.minY, width: rect.width, height: width))

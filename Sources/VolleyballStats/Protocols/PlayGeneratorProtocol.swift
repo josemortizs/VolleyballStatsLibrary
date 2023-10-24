@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol PlayGenerator {
+public protocol PlayGenerator {
     func generatePlay() -> Play
 }

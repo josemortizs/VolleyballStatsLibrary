@@ -8,6 +8,13 @@
 import SwiftUI
 import Foundation
 
+/*
+    --------------------------------------------------------------------
+    Proof of concept, just a playground of how we could use some
+    of the components contained in the library to build a playing field.
+ --------------------------------------------------------------------
+ */
+
 struct CourtModel001<Player: PositionableProtocol>: View {
     
     @State private var playerWantToChangePosition: Bool = false
@@ -37,7 +44,6 @@ struct CourtModel001<Player: PositionableProtocol>: View {
                     HStack(alignment: .center, spacing: 0) {
                         ForEach(1..<10) { column in
                             VStack(alignment: .center, spacing: 0) {
-                                // TODO: Controlar si hay alguien en esa posición
                                 if playerWantToChangePosition {
                                     ZStack(alignment: .center) {
                                         Circle()
