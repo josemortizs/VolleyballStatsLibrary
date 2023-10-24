@@ -129,12 +129,12 @@ struct ExampleUse_CourtModel001: View {
     }
 }
 
-struct ExamplePositionable: PositionableProtocol, Equatable {
+public struct ExamplePositionable: PositionableProtocol, Equatable {
     
-    var position: CGPoint
-    var size: CGFloat = 60
+    public var position: CGPoint
+    public var size: CGFloat = 60
     
-    var body: some View {
+    public var body: some View {
         ZStack {
             Circle()
                 .fill(Color.blue)
@@ -144,7 +144,7 @@ struct ExamplePositionable: PositionableProtocol, Equatable {
         }
     }
     
-    static func == (lhs: ExamplePositionable, rhs: ExamplePositionable) -> Bool {
+    public static func == (lhs: ExamplePositionable, rhs: ExamplePositionable) -> Bool {
         lhs.position == rhs.position
     }
 }
