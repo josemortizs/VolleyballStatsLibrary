@@ -74,4 +74,14 @@ final class PlayTests: XCTestCase {
         XCTAssertEqual(play1.description, "Play: type -> SPIKE - success -> 80")
         XCTAssertEqual(play2.description, "Play: type -> PASS - success -> 60")
     }
+    
+    func testPlaySecondInitializer() {
+        let play = Play(type: .spike, success: 70, position: CGPoint(x: 3.0, y: 4.0))
+        
+        XCTAssertFalse(play.id.isEmpty)
+
+        XCTAssertEqual(play.type, .spike)
+        XCTAssertEqual(play.successPercentage, 70)
+        XCTAssertEqual(play.position, CGPoint(x: 3.0, y: 4.0))
+    }
 }
