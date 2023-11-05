@@ -8,8 +8,8 @@
 import Foundation
 
 /// Representation of a play, a point, in volleyball
-public struct Play: Identifiable, Hashable, Comparable, Equatable {
-
+public struct Play: Identifiable, Hashable, Comparable, Equatable, CustomStringConvertible {
+    
     /// unique identifier
     public var id: String
     /// type of play: pass, spike, block...
@@ -18,6 +18,10 @@ public struct Play: Identifiable, Hashable, Comparable, Equatable {
     public var successPercentage: Int
     /// position at the time of the play
     public var position: CGPoint
+    
+    public var description: String {
+        "Play: type -> \(type.rawValue) - success -> \(successPercentage)"
+    }
     
     public init(
         id: String,

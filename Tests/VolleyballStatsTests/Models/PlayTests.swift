@@ -66,5 +66,12 @@ final class PlayTests: XCTestCase {
         XCTAssertTrue(PlayType.allCases.contains(.block))
         XCTAssertTrue(PlayType.allCases.contains(.dig))
     }
-}
+    
+    func testDescription() {
+        let play1 = Play(id: "1", type: .spike, success: 80, position: CGPoint(x: 10, y: 20))
+        let play2 = Play(id: "2", type: .pass, success: 60, position: CGPoint(x: 5, y: 15))
 
+        XCTAssertEqual(play1.description, "Play: type -> SPIKE - success -> 80")
+        XCTAssertEqual(play2.description, "Play: type -> PASS - success -> 60")
+    }
+}
